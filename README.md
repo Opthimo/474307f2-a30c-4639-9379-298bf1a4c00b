@@ -114,15 +114,52 @@ Once installed, you're ready to begin managing your projects with Git.
 ## 3) Questions
 
 1. What does the command `git init` do?
+
+Initialisiert das Verzeichnis in dem es ausgeführt wurd für git, damit git dieses beobachtet
+
 2. How can you check which files have been staged for the next commit?
+
+git status
+
 3. What is the purpose of the commit message, and why is it important?
+
+Damit man kurz beschreiben kann, welche Änderungen an den Dateien vorgenommen wurden, 
+da sonst nur die Zeit und der Hash des commits zur Verfügung stehen. Das ist hilfreich
+zum untersuchen der History und beim Zusammenarbeiten mit anderen Personen.
+
 4. What does `git add` do, and how does it move changes from the working tree to the staging area?
+
+git add teilt git mit welche Dateien und wessen Änderungen beim commit übernommen werden sollen.
+Es verschiebt die Dateien vom working diretcory in die staging area. 
+
 5. Why is it useful to have a staging area separate from the working tree?
+
+Du kannst entschieden, welche Dateien und Änderungen im Endefeekt commitet werden.
+Du kannst die Änderungen untersuchen und ggf. in kleinere commits splitten.
+
 6. How does providing a commit message inline with `-m` differ from using a text editor?
+
+Es ist nur eine Zeile und kann ggf. einfacher automatisiert werden.
+Beim commit ohne "-m" hat man noch die Möglichkeit mehrzeilige Kommentare hinzuzufügen.
+
 7. What information does `git log --oneline` provide compared to `git log`?
+
+git log --oneline: Es liefert die letzten commits mit einem verkürzten hash und deren message in jeweils nur einer Zeile zurück.
+git log: liefert eine deteilierte Ausgabe über die letztens commits.
+
 8. What does the detached HEAD state mean, and why is it important to return to the master branch after checking out an old commit?
+
+Es heißt, dass du gerade nicht in einem Branch bist. 
+
 9. How does Git ensure the safety of your current changes when navigating through the history?
+
+Git warnt dich wenn du branches switchen, oder committen mööchtest bei ungespeicherten Änderungen.
+
 10. How does `git restore` differ from `git checkout` when used to discard changes?
+
+restore: Kann Änderungen seit dem letzten add im working directory rückgämgig machen.
+checkout, springt zu einem commit zurück von dem du weitere branches erstellen kannst. 
+
 11. Why is it important to review your changes carefully with `git status` before discarding them?
 12. What is the difference between restoring changes in the working tree and unstaging changes from the staging area?
 
